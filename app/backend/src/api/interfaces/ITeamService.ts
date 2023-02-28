@@ -1,5 +1,6 @@
-import TeamModel from '../../database/models/TeamModel';
+import ITeam from './ITeam';
 
 export default interface ITeamService {
-  readAll(): Promise<TeamModel[]>;
+  readAll(): Promise<ITeam[]>;
+  readById(id: number): Promise<ITeam>;
 }
