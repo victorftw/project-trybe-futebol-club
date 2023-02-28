@@ -3,7 +3,9 @@ import db from '.';
 
 class UserModel extends Model {
   declare readonly id: number;
-  declare teamName: string;
+  declare role: string;
+  declare email: string;
+  declare password: string;
 }
 
 UserModel.init(
@@ -13,6 +15,10 @@ UserModel.init(
       autoIncrement: true,
       primaryKey: true,
       type: INTEGER,
+    },
+    username: {
+      allowNull: false,
+      type: STRING,
     },
     role: {
       allowNull: false,
