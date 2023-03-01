@@ -3,6 +3,7 @@ import db from '.';
 
 class UserModel extends Model {
   declare readonly id: number;
+  declare username: string;
   declare role: string;
   declare email: string;
   declare password: string;
