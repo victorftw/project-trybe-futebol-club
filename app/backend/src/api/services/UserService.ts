@@ -7,7 +7,7 @@ import IUserService from '../interfaces/IUserService';
 export default class UserService implements IUserService {
   protected model: ModelStatic<UserModel> = UserModel;
 
-  async readUser(email: string, password: string): Promise<string> {
+  async readLogin(email: string, password: string): Promise<string> {
     const response = await this.model.findOne({
       where: { email },
     });

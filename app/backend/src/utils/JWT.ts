@@ -9,4 +9,14 @@ const generateToken = async (data: IUser) =>
     algorithm: 'HS256',
   });
 
+const authenticate = async (token: string) => {
+  const [, actualToken] = token.split(' ');
+  if (actualToken) {
+    return jwt.verify(actualToken, JWT_SECRET);
+  }
+  return jwt.verify(token, JWT_SECRET);
+};
+
 export default generateToken;
+
+export { authenticate };
