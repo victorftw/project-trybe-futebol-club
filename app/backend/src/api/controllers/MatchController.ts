@@ -16,4 +16,17 @@ export default class MatchController {
       return res.status(404).json({ message });
     }
   }
+
+  async readMatches(req: Request, res: Response) {
+    const { inProgress } = req.query;
+
+    const filter = inProgress === undefined ? undefined : inProgress === 'true';
+
+    try {
+      const result = await this._service.readMatches(filter);
+      return res.status(200).json(result);
+    } catch ({ message }) {
+      return res.status(404).json({ message });
+    }
+  }
 }
