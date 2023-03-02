@@ -32,7 +32,6 @@ module.exports = {
       away_team_goals: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        defaultValue: 0,
       },
       in_progress: {
         type: Sequelize.BOOLEAN,
