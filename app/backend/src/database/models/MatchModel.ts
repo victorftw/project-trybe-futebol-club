@@ -58,14 +58,4 @@ MatchModel.belongsTo(TeamModel, {
   as: 'awayTeam',
 });
 
-TeamModel.hasMany(MatchModel, {
-  foreignKey: 'home_team_id',
-  as: 'homeTeam',
-});
-
-TeamModel.hasMany(MatchModel, {
-  foreignKey: 'away_team_id',
-  as: 'awayTeam',
-});
-
 export default MatchModel;
