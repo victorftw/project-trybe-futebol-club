@@ -8,15 +8,6 @@ export default class MatchController {
     this._service = service;
   }
 
-  async readAll(_req: Request, res: Response) {
-    try {
-      const result = await this._service.readAll();
-      return res.status(200).json(result);
-    } catch ({ message }) {
-      return res.status(404).json({ message });
-    }
-  }
-
   async readMatches(req: Request, res: Response) {
     const { inProgress } = req.query;
 

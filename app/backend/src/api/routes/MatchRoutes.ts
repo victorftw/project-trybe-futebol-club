@@ -8,6 +8,5 @@ const matchController = new MatchController(matchService);
 
 matchRouter.get('/matches', (req: Request, res: Response) =>
   matchController.readMatches(req, res));
-// matchRouter.get('/matches', (req: Request, res: Response) => matchController.readAll(req, res));
 
 export default matchRouter;
