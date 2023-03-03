@@ -30,4 +30,11 @@ export default class MatchService implements IMatchService {
   async finishMatches(id: number): Promise<void> {
     await this.model.update({ inProgress: false }, { where: { id } });
   }
+
+  async updateMatches(
+    id: number,
+    data: { homeTeamGoals: number; awayTeamGoals: number },
+  ): Promise<void> {
+    await this.model.update(data, { where: { id } });
+  }
 }

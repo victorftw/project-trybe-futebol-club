@@ -30,4 +30,14 @@ export default class MatchController {
       return res.status(404).json({ message });
     }
   }
+
+  async updateMatches(req: Request, res: Response) {
+    const { id } = req.params;
+    try {
+      this._service.updateMatches(Number(id), req.body);
+      return res.status(200).json({ message: 'Match updated successfully' });
+    } catch ({ message }) {
+      return res.status(404).json({ message });
+    }
+  }
 }

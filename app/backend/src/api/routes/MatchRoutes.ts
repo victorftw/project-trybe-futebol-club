@@ -11,6 +11,12 @@ matchRouter.get('/matches', (req: Request, res: Response) =>
   matchController.readMatches(req, res));
 
 matchRouter.patch(
+  '/matches/:id',
+  validateToken,
+  (req: Request, res: Response) => matchController.updateMatches(req, res),
+);
+
+matchRouter.patch(
   '/matches/:id/finish',
   validateToken,
   (req: Request, res: Response) => matchController.finishMatches(req, res),
