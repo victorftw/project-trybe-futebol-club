@@ -13,7 +13,7 @@ export default class TeamService implements ITeamService {
 
   async readById(id: number): Promise<ITeam> {
     const response = await this.model.findOne({ where: { id } });
-    if (!response) throw new Error('ID Not Found');
+    if (!response) throw new Error('There is no team with such id!');
     return response;
   }
 }

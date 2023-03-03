@@ -40,4 +40,13 @@ export default class MatchController {
       return res.status(404).json({ message });
     }
   }
+
+  async addNewMatches(req: Request, res: Response) {
+    try {
+      const response = await this._service.addNewMatches(req.body);
+      return res.status(201).json(response);
+    } catch ({ message }) {
+      return res.status(404).json({ message });
+    }
+  }
 }
