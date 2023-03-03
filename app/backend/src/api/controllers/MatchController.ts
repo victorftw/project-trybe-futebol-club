@@ -20,4 +20,14 @@ export default class MatchController {
       return res.status(404).json({ message });
     }
   }
+
+  async finishMatches(req: Request, res: Response) {
+    const { id } = req.params;
+    try {
+      this._service.finishMatches(Number(id));
+      return res.status(200).json({ message: 'Finished' });
+    } catch ({ message }) {
+      return res.status(404).json({ message });
+    }
+  }
 }

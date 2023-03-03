@@ -7,16 +7,6 @@ import IMatchService from '../interfaces/IMatchService';
 export default class MatchService implements IMatchService {
   protected model: ModelStatic<MatchModel> = MatchModel;
 
-  async readAll(): Promise<IMatch[]> {
-    const response = await this.model.findAll({
-      include: [
-        { model: TeamModel, as: 'homeTeam' },
-        { model: TeamModel, as: 'awayTeam' },
-      ],
-    });
-    return response;
-  }
-
   async readMatches(inProgress?: boolean): Promise<IMatch[]> {
     if (inProgress === undefined) {
       const response = await this.model.findAll({
@@ -35,5 +25,9 @@ export default class MatchService implements IMatchService {
       where: { inProgress },
     });
     return response;
+  }
+
+  async finishMatches(id: number): Promise<void> {
+    await this.model.update({ inProgress: false }, { where: { id } });
   }
 }
