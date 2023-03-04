@@ -11,4 +11,6 @@ export default interface IMatch {
   awayTeam?: {
     teamName: string;
   };
+  homeTeamName?: string;
+  awayTeamName?: string;
 }
