@@ -20,13 +20,6 @@ Nesse projeto foi construido um back-end dockerizado utilizando modelagem de dad
 <details>
   <summary><strong>Como rodar o projeto</strong></summary></br>
 
- Configurações mínimas para execução do projeto:
-
-- Sistema Operacional Distribuição Unix
-- Node versão 16.14.0 LTS
-- Docker
-- Docker-compose versão >=1.29.2
-
   **Com Docker:**
 
   **:warning: Antes de começar, seu docker-compose precisa estar na versão 1.29 ou superior. [Veja aqui](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04-pt) ou [na documentação](https://docs.docker.com/compose/install/) como instalá-lo. No primeiro artigo, você pode substituir onde está com `1.26.0` por `1.29.2`.**
