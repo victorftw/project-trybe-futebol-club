@@ -32,8 +32,6 @@ Nesse projeto foi construido um back-end dockerizado utilizando modelagem de dad
 
 **Localmente:**
 
-**Necessita ter um banco de dados(MySql) instalado localmente**
-
 - `npm run install:apps` na raiz do projeto para instalar dependências do front e back-end;
 - `npm run compose:up` na raiz do projeto;
 - `npm run build`;
