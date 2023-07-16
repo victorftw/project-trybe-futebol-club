@@ -26,7 +26,7 @@ Nesse projeto foi construido um back-end dockerizado utilizando modelagem de dad
 
 - `npm run compose:up` na raiz do projeto;
 - `npm run install:apps` na raiz do projeto para instalar dependências do front e back-end;
-- `docker exec -it app_backend bash` em ./app/backend;
+- `docker exec -it app_backend sh` em ./app/backend;
 - `npm run build` no container do backend;
 - `npm run db:reset` no container do backend;
 
@@ -34,7 +34,6 @@ Nesse projeto foi construido um back-end dockerizado utilizando modelagem de dad
 
 - `npm run install:apps` na raiz do projeto para instalar dependências do front e back-end;
 - `npm run compose:up` na raiz do projeto;
-- `npm run build`;
-- `npm run db:reset`;
+- `npm run build` em app/frontend
 
 </details>
